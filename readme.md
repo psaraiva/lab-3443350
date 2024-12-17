@@ -49,6 +49,7 @@ Crie a tabela de usuários no SQLite.
 - `.read migration/sqlite/create_table_users_20241125102000.sql`
 - `.schema`
 - `.exit`
+- `docker exec -it lab-34483350 composer dump-autoload`
 
 ## Modo de usar
 O parâmetro `--db-engine` aceita somente um único valor: `sqlite`, `csv` ou `json`.
