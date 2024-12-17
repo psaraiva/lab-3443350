@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    image: lab-34483350/7.4-cli
+    container_name: lab-34483350
+    tty: true
+    environment:
+      COMPOSER_MEMORY_LIMIT: -1
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
